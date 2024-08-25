@@ -17,7 +17,7 @@ int printColorMap() {
 void testPrintColorMap() {
     char buffer[1024];
     memset(buffer, 0, sizeof(buffer));
-    FILE* output = freopen("/dev/null", "a", stdout);
+    freopen("/dev/null", "a", stdout);
     setvbuf(stdout, buffer, _IOFBF, sizeof(buffer));
     printColorMap();
     fflush(stdout);
